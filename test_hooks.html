@@ -1,0 +1,28 @@
+<head>
+  <title>test_hooks</title>
+</head>
+
+<body>
+  {{> hello}}
+  
+</body>
+
+<template name="hello">
+  <div style="width:25%;float:left;">
+  {{#each randomlist}}
+    {{>random}}<br>
+  {{/each}}
+  </div>
+  <div style="width:25%;float:right;">
+  {{#each randomlistResult}}
+    {{>randomResult}}<br>
+  {{/each}}
+  </div>
+</template>
+
+<template name="random">
+<input value="{{random}}"><button>+1</button>
+</template>
+<template name="randomResult">
+<span>{{date}}</span> <span>{{random}}</span>
+</template>
